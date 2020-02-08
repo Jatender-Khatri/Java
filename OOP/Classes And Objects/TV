@@ -1,0 +1,24 @@
+class TV
+{
+	String TVName;
+	int price;
+	String channel;
+	public void display(){
+		System.out.println("Something People can seen on the Screen");
+	}
+	public void display1(){
+		System.out.println("Geo channel");
+	}
+	public static void main(String args[])
+	{
+		TV t = new TV();
+		t.TVName = "LG";
+		t.channel = "Star Plus";
+		t.price = 23000;
+		System.out.println(t.TVName);
+		System.out.println(t.price);
+		System.out.println(t.channel);
+		t.display();
+		t.display1();
+	}
+}
