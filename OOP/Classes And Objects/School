@@ -1,0 +1,43 @@
+class School
+{
+	String name;
+	int age;
+	int fees;
+	
+	public void schoolName(){
+		System.out.println("Kainaat public School and College");
+	}
+	public void getSchool(){
+		System.out.println("Sindh public school and College");
+	}
+	public static void main(String args[])
+	{
+		School s1 = new School();
+		School s2 = new School();
+		School s3 = new School();
+		s1.name = "Jatender khatri";
+		s1.age= 19;
+		s1.fees = 700;
+		s2.name = "Naresh kumar khatri";
+		s2.age = 19;
+		s2.fees = 00;
+		s3.name = "Jai kumar khatri";
+		s3.age = 18;
+		s3.fees = 00;
+		System.out.println(s1.name);
+		System.out.println(s1.age);
+		System.out.println(s1.fees);
+		s1.schoolName();
+		s1.getSchool();
+		System.out.println(s2.name);
+		System.out.println(s2.age);
+		System.out.println(s2.fees);
+		s2.schoolName();
+		s2.getSchool();
+		System.out.println(s3.name);
+		System.out.println(s3.age);
+		System.out.println(s3.fees);
+		s3.schoolName();
+		s3.getSchool();
+	}
+}
