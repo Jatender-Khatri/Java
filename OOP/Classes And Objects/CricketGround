@@ -1,0 +1,25 @@
+class CricketGround
+{
+	String name;
+	String Location;
+	int ticket;
+	
+	public void match1(){
+		System.out.println("Ind vs Pak");
+	}
+	public void match2(){
+		System.out.println("Pak vs Aus");
+	}
+	public static void main(String args[])
+	{
+		CricketGround c = new CricketGround();
+		c.name = "National Stadium";
+		c.Location = "Karachi";
+		c.ticket = 500;
+		System.out.println(c.name);
+		System.out.println(c.Location);
+		System.out.println(c.ticket);
+		c.match1();
+		c.match2();
+	}
+}
