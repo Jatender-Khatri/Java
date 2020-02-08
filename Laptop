@@ -1,0 +1,42 @@
+class Laptop
+{
+	String name, companyName;
+	int price;
+	
+	public void getGeneration(){
+		System.out.println("This is the 2nd Generation");
+	}
+	public void getCore(){
+		System.out.println("This is the Core i5");
+	}
+	public static void main(String args[])
+	{
+			Laptop l1 = new Laptop();
+			Laptop l2 = new Laptop();
+			Laptop l3 = new Laptop();
+			l1.name = "HP";
+			l1.companyName = "HP";
+			l1.price = 30000;
+			l2.name = "Dell";
+			l2.companyName = "Dell";
+			l2.price = 23000;
+			l3.name = "Sumsung";
+			l3.companyName = "Sumsung";
+			l3.price = 20000;
+			System.out.println(l1.name);
+			System.out.println(l1.companyName);
+			System.out.println(l1.price);
+			l1.getGeneration();
+			l1.getCore();
+			System.out.println(l2.name);
+			System.out.println(l2.companyName);
+			System.out.println(l2.price);
+			l2.getGeneration();
+			l2.getCore();
+			System.out.println(l3.name);
+			System.out.println(l3.companyName);
+			System.out.println(l3.price);
+			l3.getGeneration();
+			l3.getCore();
+	}
+}
