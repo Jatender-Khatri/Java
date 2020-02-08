@@ -1,0 +1,24 @@
+class Bank
+{
+	String name;
+	String branch;
+	int balance;
+	public void Location(){
+		System.out.println("This Bank Located in Hyderabad");
+	}
+	public void getLoaction(){
+		System.out.println("This Bank Located in Umerkot");
+	}
+	public static void main(String args[])
+	{
+		Bank b = new Bank();
+		b.name = "HBL";
+		b.branch = "Umerkot";
+		b.balance = 25000;
+		System.out.println(b.name);
+		System.out.println(b.branch);
+		System.out.println(b.balance);
+		b.Location();
+		b.getLoaction();
+	}
+}
