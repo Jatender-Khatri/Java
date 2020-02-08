@@ -1,0 +1,43 @@
+class Mobile
+{
+	String name;
+	String companyName;
+	int price;
+	
+	public void mobile(){
+		System.out.println("This is the OPO Company");
+	}
+	public void getMobile(){
+		System.out.println("This is the Sumsung Company");
+	}
+	public static void main(String args[])
+	{
+		Mobile m1 = new Mobile();
+		Mobile m2 = new Mobile();
+		Mobile m3 = new Mobile();
+		m1.companyName = "Sumsung";
+		m1.name = "Sumsung Galaxy-J2";
+		m1.price = 12000;
+		m2.companyName = "OPO";
+		m2.name = "OPO A7";
+		m2.price = 24500;
+		m3.companyName = "VIVO";
+		m3.name = "VIVO v9";
+		m3.price = 45000;
+		System.out.println(m1.companyName);
+		System.out.println(m1.name);
+		System.out.println(m2.price);
+		m1.getMobile();
+		m1.mobile();
+		System.out.println(m2.companyName);
+		System.out.println(m2.name);
+		System.out.println(m2.price);
+		m2.getMobile();
+		m2.mobile();
+		System.out.println(m3.companyName);
+		System.out.println(m3.name);
+		System.out.println(m3.price);
+		m3.getMobile();
+		m3.mobile();
+	}
+}
