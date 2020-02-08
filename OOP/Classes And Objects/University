@@ -1,0 +1,25 @@
+class Univeristy
+{
+	String name;
+	String rollNo;
+	int age;
+	
+	public void departement(){
+		System.out.println("Computer System Engineering");
+	}
+	public void departement1(){
+		System.out.println("Software Engineering");
+	}
+	public static void main(String args[])
+	{
+		Univeristy u = new Univeristy();
+		u.name = "Jatender khatri";
+		u.rollNo = "18CS48";
+		u.age = 19;
+		System.out.println(u.name);
+		System.out.println(u.rollNo);
+		System.out.println(u.age);
+		u.departement();
+		u.departement1();
+	}
+}
