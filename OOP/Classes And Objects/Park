@@ -1,0 +1,25 @@
+class Park
+{
+	String name;
+	String location;
+	int ticket;
+	
+	public void UmerkotPark(){
+		System.out.println("Umerkot park");
+	}
+	public void HyderabadPark(){
+		System.out.println("Hyderabad");
+	}
+	public static void main(String ags[])
+	{
+		Park p = new Park();
+		p.name = "Sooraj Park";
+		p.location = "Umerkot";
+		p.ticket = 30;
+		System.out.println(p.name);
+		System.out.println(p.location);
+		System.out.println(p.ticket);
+		p.UmerkotPark();
+		p.HyderabadPark();
+	}
+}
