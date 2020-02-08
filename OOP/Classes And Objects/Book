@@ -1,0 +1,25 @@
+class Book
+{
+	String name;
+	String author;
+	int price;
+	
+	public void canRead1(){
+		System.out.println("Yes");
+	}
+	public void canRead2(){
+		System.out.println("Yes I can read Java Book");
+	}
+	public static void main(String args[])
+	{
+		Book b = new Book();
+		b.name = "Java Programming";
+		b.author = "Jatender khatri";
+		b.price = 700;
+		System.out.println(b.name);
+		System.out.println(b.author);
+		System.out.println(b.price);
+		b.canRead1();
+		b.canRead2();
+	}
+}
