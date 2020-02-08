@@ -1,0 +1,25 @@
+class City
+{
+	String name;
+	int ZipCode;
+	int population;
+	
+	public void beautiful(){
+		System.out.println("Umerkot is the Beautiful");
+	}
+	public void beautiful1(){
+		System.out.println("Jamshoro is the Beautiful");
+	}
+	public static void main(String args[])
+	{
+		City c = new City();
+		c.name = "Umerkot";
+		c.ZipCode = 69100;
+		c.population = 200000;
+		System.out.println(c.name);
+		System.out.println(c.ZipCode);
+		System.out.println(c.population);
+		c.beautiful();
+		c.beautiful1();
+	}
+}
