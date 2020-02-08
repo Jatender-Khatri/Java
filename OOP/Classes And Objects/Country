@@ -1,0 +1,26 @@
+class Country
+{
+	String name;
+	int province;
+	String city;
+	
+	public void safe(){
+		System.out.println("Pakistan is the Safe Country");
+	}
+	public void historicalPlaces()
+	{
+		System.out.println("Pakistan is the Historical pleace in the World");
+	}
+	public static void main(String name[])
+	{
+		Country c = new Country();
+		c.name = "Pakistan";
+		c.province = 4;
+		c.city = "Umerkot";
+		System.out.println(c.name);
+		System.out.println(c.province);
+		System.out.println(c.city);
+		c.safe();
+		c.historicalPlaces();
+	}
+}
