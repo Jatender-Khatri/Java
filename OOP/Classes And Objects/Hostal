@@ -1,0 +1,26 @@
+class Hostal
+{
+	String hostalName;
+	int room;
+	String location;
+	
+	public void Block(){
+		System.out.println("Block Hostal");
+	}
+	public void LatifHostal()
+	{
+		System.out.println("Latif Hostal");
+	}
+	public static void main(String args[])
+	{
+		Hostal h = new Hostal();
+		h.hostalName = "Rashdi Hostal";
+		h.room = 114;
+		h.location = "MUET Jamshoro";
+		System.out.println(h.hostalName);
+		System.out.println(h.room);
+		System.out.println(h.location);
+		h.Block();
+		h.LatifHostal();
+	}
+}
