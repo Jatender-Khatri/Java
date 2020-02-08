@@ -1,0 +1,26 @@
+class Car
+{
+	String CarName;
+	String Model;
+	int price;
+	
+	public void Suzuki()
+	{
+		System.out.println("Suzuk car");
+	}
+	public void Honda(){
+		System.out.println("Honda car");
+	}
+	public static void main(String args[])
+	{
+		Car c = new Car();
+		c.CarName = "Suzuki Car";
+		c.Model = "2019";
+		c.price = 700000;
+		System.out.println(c.CarName);
+		System.out.println(c.Model);
+		System.out.println(c.price);
+		c.Suzuki();
+		c.Honda();
+	}
+}
