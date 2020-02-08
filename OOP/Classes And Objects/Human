@@ -1,0 +1,25 @@
+class Human
+{
+	String gender;
+	String name;
+	int age;
+	
+	public void maleGender(){
+		System.out.println("Male");
+	}
+	public void femaleGender(){
+		System.out.println("Female");
+	}
+	public static void main(String args[])
+	{
+		Human a = new Human();
+		a.gender = "Male";
+		a.name = "Jatender khatri";
+		a.age = 19;
+		System.out.println(a.gender);
+		System.out.println(a.name);
+		System.out.println(a.age);
+		a.maleGender();
+		a.femaleGender();
+	}
+}
