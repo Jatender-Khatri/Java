@@ -1,0 +1,37 @@
+public class Main
+{
+    private  String name, gender;
+    private int age;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+    public static void main(String args[])
+    {
+        Main m = new Main();
+        m.setName("Jatender");
+        m.setGender("Male");
+        m.setAge(19);
+        System.out.println(m.getName() + " " + m.getGender() + "  "  + m.getAge());
+    }
+}
