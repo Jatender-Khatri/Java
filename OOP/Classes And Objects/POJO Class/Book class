@@ -1,0 +1,37 @@
+public class Main
+{
+    private  String name, author;
+    private  int price;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+    public static void main(String args[])
+    {
+        Main m = new Main();
+        m.setName("Java");
+        m.setAuthor("Jatender");
+        m.setPrice(1200);
+        System.out.println(m.getName() + "  " + m.getAuthor() + "  " + m.getPrice());
+    }
+}
