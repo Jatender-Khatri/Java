@@ -1,0 +1,37 @@
+public class Main
+{
+   private String name, model;
+   private  int price;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getModel() {
+        return model;
+    }
+    public static  void main(String args[])
+    {
+        Main m = new Main();
+        m.setPrice(1000000);
+        m.setName("Honda");
+        m.setModel("2020");
+        System.out.println(m.getName() + "  " + m.getModel() + "  " + m.getPrice());
+    }
+}
