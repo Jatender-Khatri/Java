@@ -1,0 +1,38 @@
+package com.company;
+public  class Main
+{
+    private  String name, bikeModel;
+    private int price;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBikeModel(String bikeModel) {
+        this.bikeModel = bikeModel;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public String getName()
+    {
+        return  this.name;
+    }
+
+    public String getBikeModel() {
+        return this.bikeModel;
+    }
+    public int getPrice()
+    {
+        return  this.price;
+    }
+    public static void main(String args[])
+    {
+        Main m = new Main();
+        m.setName("jatender");
+        m.setBikeModel("Honda");
+        m.setPrice(45000);
+        System.out.println(m.getName() + "  " + m.getBikeModel() + "  " + m.getPrice());
+    }
+}
