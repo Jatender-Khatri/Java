@@ -1,0 +1,37 @@
+public class Main
+{
+    private  String name, location;
+    private  int price;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+    public static void main(String args[])
+    {
+        Main m = new Main();
+        m.setName("National Stadium");
+        m.setLocation("Karachi");
+        m.setPrice(200);
+        System.out.println(m.getName() + "  " + m.getLocation() + "  " + m.getPrice());
+    }
+}
