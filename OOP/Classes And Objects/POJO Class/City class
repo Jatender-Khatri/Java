@@ -1,0 +1,28 @@
+public class Main
+{
+   private  String name;
+   private  int zipCode;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getZipCode() {
+        return zipCode;
+    }
+    public static  void  main(String args[])
+    {
+        Main m = new Main();
+        m.setName("Umerkot");
+        m.setZipCode(69100);
+        System.out.println(m.getName() + "  " + m.getZipCode());
+    }
+}
