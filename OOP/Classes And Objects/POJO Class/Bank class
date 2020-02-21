@@ -1,0 +1,47 @@
+public class Main{
+    private  String name;
+    private String branch;
+    private float balance;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName()
+    {
+        return this.name;
+    }
+
+    public void setBranch(String branch) {
+        this.branch = branch;
+    }
+
+    public String getBranch() {
+        return this.branch;
+    }
+
+    public void setBalance(float balance) {
+        this.balance = balance;
+    }
+    public float getBalance()
+    {
+        return  this.balance;
+    }
+
+    public static void main(String[] args) {
+	    Main m1 =  new Main();
+	    Main m2 = new Main();
+	    Main m3 = new Main();
+	    m1.setName("Jatender");
+	    m1.setBranch("Umerkot");
+	    m1.setBalance(1000);
+	    m2.setName("Naresh");
+	    m2.setBranch("Jamshoro");
+	    m2.setBalance(2000);
+	    m3.setName("Turab Alee");
+	    m3.setBranch("Hyderabad");
+	    m3.setBalance(3000);
+        System.out.println(m1.getName() + "  " + m1.getBranch() + "  " + m1.getBalance());
+        System.out.println(m2.getName() + "  " + m2.getBranch() + "  " + m2.getBalance());
+        System.out.println(m3.getName() + "  " + m3.getBranch() + "  " + m3.getBalance());
+    }
+}
