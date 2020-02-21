@@ -1,0 +1,38 @@
+
+public class Main
+{
+    private  String name, location;
+    private  int room;
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setRoom(int room) {
+        this.room = room;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRoom() {
+        return room;
+    }
+    public  static void main(String args[])
+    {
+        Main m = new Main();
+        m.setName("Muet");
+        m.setLocation("Block Hostal");
+        m.setRoom(114);
+        System.out.println(m.getName() + " " + m.getLocation() + "  " + m.getRoom());
+    }
+}
