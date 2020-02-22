@@ -1,0 +1,33 @@
+class School
+{
+    String name;
+    String Location;
+
+    public void privateSchool()
+    {
+        System.out.println("Private School");
+    }
+    public void governmentSchool(){
+        System.out.println("Government School");
+    }
+}
+
+public class Student extends School {
+    String studentName;
+    public void getSchoolName()
+    {
+        System.out.println("Kainaat Public School Umerkot");
+    }
+    public static void main(String[] args) {
+        Student m = new Student();
+        m.name = "Sindh public school Umerkot";
+        m.Location = "Umerkot";
+        m.studentName = "Jatender";
+        System.out.println(m.name);
+        System.out.println(m.Location);
+        System.out.println(m.studentName);
+        m.privateSchool();
+        m.governmentSchool();
+        m.getSchoolName();
+    }
+}
