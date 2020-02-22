@@ -1,0 +1,17 @@
+public class Calculator {
+
+    public static void main(String[] args) {
+        Adder a = new Adder();
+        Multiplication m = new Multiplication();
+        Subtraction s = new Subtraction();
+        a.add(2,2);
+        a.add(2,2,2);
+        a.add(2,2,2,2);
+        m.multiplication(2,2);
+        m.multiplication(2,2,2);
+        m.multiplication(2,2,2,2);
+        s.Subtraction(2,2);
+        s.Subtraction(2,2,2);
+        s.Subtraction(2,2,2,2);
+    }
+}
