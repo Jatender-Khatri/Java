@@ -1,0 +1,36 @@
+class Employee
+{
+    String name;
+    int salary,id;
+
+    public void setLocation()
+    {
+        System.out.println("Jamshoro");
+    }
+    public void experience()
+    {
+        System.out.println("2 year experience");
+    }
+}
+public class Main extends Employee{
+    int age;
+    public void testResult()
+    {
+        System.out.println("90%");
+    }
+
+    public static void main(String[] args) {
+        Main m = new Main();
+        m.name = "Jatender";
+        m.id = 114;
+        m.salary = 30000;
+        m.age = 20;
+        m.setLocation();
+        m.experience();
+        System.out.println("Employee Name : " + m.name);
+        System.out.println("Employee Id : " + m.id);
+        System.out.println("Employee age : " + m.age);
+        System.out.println("Employee salary : " + m.salary);
+        m.testResult();
+    }
+}
