@@ -1,0 +1,36 @@
+class University
+{
+    String studentName, rollNumber;
+    int age;
+
+    void getDepartment()
+    {
+        System.out.println("Computer System Engineering");
+    }
+    void getChairmanName()
+    {
+        System.out.println("Dr. Sheeraz Memon");
+    }
+}
+
+public class Department extends University{
+    int semesterFee;
+    void exam(){
+        System.out.println("Exam on Monday");
+    }
+
+    public static void main(String[] args) {
+	    Department m = new Department();
+	    m.studentName = "Jatender Khatri";
+	    m.rollNumber = "18CS48";
+	    m.age = 19;
+	    m.semesterFee = 26050;
+	    m.getDepartment();
+	    m.getChairmanName();
+        System.out.println("Student Name : " + m.studentName);
+        System.out.println("Roll Number : " + m.rollNumber);
+        System.out.println("Age : " + m.age);
+        System.out.println("Semester Fees : " + m.semesterFee);
+        m.exam();
+    }
+}
