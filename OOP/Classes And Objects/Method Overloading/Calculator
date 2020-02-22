@@ -1,0 +1,14 @@
+public class Adder {
+    public void add(int a, int b)
+    {
+        System.out.println("Add = " + (a+b));
+    }
+    public void add(int a, int b, int c)
+    {
+        System.out.println("Add = " + (a+b+c));
+    }
+    public  void add(int a, int b, int c, int d)
+    {
+        System.out.println("Add = " + (a+b+c+d));
+    }
+}
