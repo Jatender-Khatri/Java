@@ -1,0 +1,55 @@
+class PSL
+{
+	String OnwerOfPSL;
+	int noOfTeam;
+	
+	public void myFavouriteTeam()
+	{
+		System.out.println("Karachi Kings...");
+	}
+	public void myFavouriteTeamInIPL()
+	{
+		System.out.println("RCB");
+	}
+}
+class KarachiKings extends PSL
+{
+	String captain;
+	int noOfPlayers;
+	
+	public void setFinal(){
+		System.out.println("In Karachi");
+	}
+}
+class PeshawarZalmi extends PSL
+{
+	String captainName;
+	int noOfPlayer;
+	
+	public void setSemiFinal(){
+		System.out.println("In Lahore");
+	}
+	
+	public static void main(String args[])
+	{
+		PeshawarZalmi a = new PeshawarZalmi();
+		a.OnwerOfPSL = "PCB";
+		a.noOfTeam = 6;
+		a.captain = "Imad Wasim";
+		a.noOfPlayers = 11;
+		a.captainName = " Darren Sammy";
+		a.noOfPlayer = 11;
+		
+		System.out.println(a.OnwerOfPSL);
+		System.out.println(a.noOfTeam);
+		System.out.println(a.captain);
+		System.out.println(a.noOfPlayers);
+		System.out.println(a.captainName);
+		System.out.println(a.noOfPlayer);
+		
+		a.myFavouriteTeam();
+		a.myFavouriteTeamInIPL();
+		a.setFinal();
+		a.setSemiFinal();
+	}
+}
