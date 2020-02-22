@@ -1,0 +1,38 @@
+class Country
+{
+    String name;
+    String population;
+    long area;
+
+    public void noOfUniversity()
+
+    {
+        System.out.println("So many University ");
+    }
+    public void student()
+    {
+        System.out.println("Good in IT Field");
+    }
+}
+public class Province extends Country{
+    String province;
+    public void noOfProvince()
+    {
+        System.out.println("4");
+    }
+
+    public static void main(String[] args) {
+        Province m = new Province();
+        m.name = "Pakistan";
+        m.population = "207.8 million";
+        m.area =  881913;
+        m.province = "Sindh";
+        System.out.println(m.name);
+        System.out.println(m.province);
+        System.out.println(m.area);
+        System.out.println(m.population);
+        m.student();
+        m.noOfUniversity();
+        m.noOfProvince();
+    }
+}
