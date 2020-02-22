@@ -1,0 +1,37 @@
+class Department
+{
+    String DepartmentName;
+    String Location;
+    int examFees;
+
+    public void noOfLabs()
+    {
+        System.out.println("14 Labs");
+    }
+    public void noOfRooms()
+    {
+        System.out.println("4 Class Rooms");
+    }
+}
+
+public class Student extends Department{
+    String name;
+    public void rollNumber()
+    {
+        System.out.println("18CS48");
+    }
+    public static void main(String[] args) {
+	    Student m = new Student();
+	    m.DepartmentName = "Computer System";
+	    m.Location = "Mehran University";
+	    m.examFees = 1615;
+	    m.name = "Jatender Khatri";
+        System.out.println(m.DepartmentName);
+        System.out.println(m.name);
+        m.rollNumber();
+        m.noOfLabs();
+        m.noOfRooms();
+        System.out.println(m.examFees);
+        System.out.println(m.Location);
+    }
+}
