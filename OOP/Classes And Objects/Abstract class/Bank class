@@ -1,0 +1,33 @@
+abstract class Bank
+{
+	abstract void brachCode();
+	abstract void location();
+}
+class UBLBank extends Bank
+{
+	public void brachCode(){
+		System.out.println("Brach code : 7060");
+	}
+	public void location()
+	{
+		System.out.println("Umerkot...");
+	}
+}
+class HBLBank extends Bank
+{
+	public void brachCode(){
+		System.out.println("Brach Code : 4056");
+	}
+	public void location(){
+		System.out.println("Karachi...");
+	}
+	public static void main(String args[])
+	{
+		Bank ubl = new UBLBank();
+		ubl.brachCode();
+		ubl.location();
+		Bank hbl = new HBLBank();
+		hbl.brachCode();
+		hbl.location();
+	}
+}
