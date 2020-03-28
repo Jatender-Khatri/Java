@@ -1,0 +1,36 @@
+abstract class Virus
+{
+	abstract void stayHome();
+	abstract void beSaved();
+}
+class HantaVirus extends Virus
+{
+	void stayHome()
+	{
+		System.out.println("Please Stay Home...");
+	}
+	void beSaved()
+	{
+		System.out.println("Please be saved...");
+	}
+}
+class CoronaVirus extends Virus
+{
+	void stayHome()
+	{
+		System.out.println("Please Stay Home...");
+	}
+	void beSaved()
+	{
+		System.out.println("Salute to Doctor...");
+	}
+	public static void main(String args[])
+	{
+		Virus h = new HantaVirus();
+		h.stayHome();
+		h.beSaved();
+		Virus c = new CoronaVirus();
+		c.stayHome();
+		c.beSaved();
+	}
+}
