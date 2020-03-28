@@ -1,0 +1,36 @@
+abstract class Gender
+{
+	abstract void run();
+	abstract void eat();
+}
+class Female extends Gender
+{
+	void run()
+	{
+		System.out.println("She is running...");
+	}
+	void eat()
+	{
+		System.out.println("She is eating...");
+	}
+}
+class Male extends Gender
+{
+	void run()
+	{
+		System.out.println("Jatender is running...");
+	}
+	void eat()
+	{
+		System.out.println("He is eating...");
+	}
+	public static void main(String args[])
+	{
+		Gender f = new Female();
+		f.run();
+		f.eat();
+		Gender m = new Male();
+		m.run();
+		m.eat();
+	}
+}
