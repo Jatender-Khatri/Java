@@ -1,0 +1,32 @@
+abstract class Laptop
+{
+	abstract void generation();
+	abstract void checkCore();
+}
+class HP extends Laptop
+{
+	public void generation(){
+		System.out.println("7nd generation...");
+	}
+	public void checkCore(){
+		System.out.println("Corei 5...");
+	}
+}
+class Dell extends Laptop
+{
+	public void generation(){
+		System.out.println("6 generation...");
+	}
+	public void checkCore(){
+		System.out.println("Corei 5...");
+	}
+	public static void main(String args[])
+	{
+		Laptop hp = new HP();
+		hp.generation();
+		hp.checkCore();
+		Laptop dell = new Dell();
+		dell.generation();
+		dell.checkCore();
+	}
+}
