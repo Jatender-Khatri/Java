@@ -1,0 +1,36 @@
+abstract class University
+{
+	abstract void run();
+	abstract void student();
+}
+class Student extends University
+{
+	void run()
+	{
+		System.out.println("Jatender");
+	}
+	void student()
+	{
+		System.out.println("Computer System");
+	}
+}
+class  Department extends University
+{
+	void run()
+	{
+		System.out.println("Turab bajeer");
+	}
+	void student()
+	{
+		System.out.println("Computer System");
+	}
+	public static void main(String args[])
+	{
+		University u1 = new Student();
+		u1.run();
+		u1.student();
+		University u2 = new Department();
+		u2.run();
+		u2.student();
+	}
+}
