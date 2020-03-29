@@ -1,0 +1,32 @@
+interface Bike
+{
+	void model();
+	void price();
+}
+class Bike125 implements Bike
+{
+	public void model(){
+		System.out.println("2016 model");
+	}
+	public void price(){
+		System.out.println("80000");
+	}
+}
+class Honda implements Bike
+{
+	public void model(){
+		System.out.println("2020 model");
+	}
+	public void price(){
+		System.out.println("60000");
+	}
+	public static void main(String args[])
+	{
+		Bike bike = new Bike125();
+		bike.model();
+		bike.price();
+		Bike honda = new Honda();
+		honda.model();
+		honda.price();
+	}
+}
