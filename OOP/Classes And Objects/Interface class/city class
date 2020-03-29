@@ -1,0 +1,32 @@
+interface City
+{
+	void zipCode();
+	void loaction();
+}
+class Jamshoro implements City
+{
+	public void zipCode(){
+		System.out.println("Zip code : 77070");
+	}
+	public void loaction(){
+		System.out.println("Jamshoro");
+	}
+}
+public class Umerkot implements City
+{
+	public void zipCode(){
+		System.out.println("Zip code : 69100");
+	}
+	public void loaction(){
+		System.out.println("Umerkot");
+	}
+	public static void main(String args[])
+	{
+		City jamshoro = new Jamshoro();
+		jamshoro.zipCode();
+		jamshoro.loaction();
+		City umerkot = new Umerkot();
+		umerkot.zipCode();
+		umerkot.loaction();
+	}
+}
