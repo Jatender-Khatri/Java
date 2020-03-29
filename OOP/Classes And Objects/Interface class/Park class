@@ -1,0 +1,32 @@
+interface Park
+{
+	void location();
+	void price();
+}
+class Aldin implements Park
+{
+	public void location(){
+		System.out.println("Karachi");
+	}
+	public void price(){
+		System.out.println("Price : 50");
+	}
+}
+public class Sooraj implements Park
+{
+	public void location(){
+		System.out.println("Umerkot");
+	}
+	public void price(){
+		System.out.println("Umerkot");
+	}
+	public static void main(String args[])
+	{
+		Park aldin = new Aldin();
+		aldin.location();
+		aldin.price();
+		Park sooraj  = new Sooraj();
+		sooraj.location();
+		sooraj.price();
+	}
+}
