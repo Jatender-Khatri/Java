@@ -1,0 +1,32 @@
+interface Engineering
+{
+	void engineeringID();
+	void passOut();
+}
+class CivilEngineering implements Engineering
+{
+	public void engineeringID(){
+		System.out.println("18CE48");
+	}
+	public void passOut(){
+		System.out.println("MUET");
+	}
+}
+class ComputerSystemEngineering implements Engineering
+{
+	public void engineeringID(){
+		System.out.println("18CS48");
+	}
+	public void passOut(){
+		System.out.println("MUET");
+	}
+	public static void main(String args[])
+	{
+		Engineering ce = new CivilEngineering();
+		ce.engineeringID();
+		ce.passOut();
+		Engineering computer = new ComputerSystemEngineering();
+		computer.engineeringID();
+		computer.passOut();
+	}
+}
