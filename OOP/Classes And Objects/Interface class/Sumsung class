@@ -1,0 +1,32 @@
+interface Mobile
+{
+	void model();
+	void name();
+}
+class LG implements Mobile
+{
+	public void model(){
+		System.out.println("Model : 2016");
+	}
+	public void name(){
+		System.out.println("Name : LG Mobile");
+	}
+}
+public class Sumsung implements Mobile
+{
+	public void model(){
+		System.out.println("Model : 2019");
+	}
+	public void name(){
+		System.out.println("Name : Sumsung");
+	}
+	public static void main(String args[])
+	{
+		Mobile lg = new LG();
+		lg.model();
+		lg.name();
+		Mobile sumsung = new Sumsung();
+		sumsung.model();
+		sumsung.name();
+	}
+}
