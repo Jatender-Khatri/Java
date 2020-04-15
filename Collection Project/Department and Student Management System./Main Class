@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println(">>>>>>>>>>> Well Come to Department and Student Management System >>>>>>>>>>>>>>");
+        Information information = new Information();
+
+        Scanner s = new Scanner( System.in );
+        information.setMenu();
+
+        int number;
+        do {
+            System.out.print("Enter your Choice : ");
+            number = s.nextInt();
+            information.performed(number);
+            System.out.println("-------------------------------------------");
+            if (number == 1)
+            {
+                do {
+                    System.out.print("Enter your Choice in the Department : ");
+                    number = s.nextInt();
+                    information.getPerformed(number);
+                    System.out.println("-------------------------------------------");
+                    if (number==6){
+                        System.out.println();}
+                    else{
+                        information.manageDepartment();}
+
+                }while (number !=6);
+            }
+            if (number == 2)
+            {
+                do {
+                    System.out.print("Enter your Choice in the Student : ");
+                    number = s.nextInt();
+                    information.performedd(number);
+                    System.out.println("-------------------------------------------");
+                    if (number == 6){
+                        System.out.println();}
+                    else
+                    {
+                        information.manageStudent();
+                    }
+                }while (number !=6);
+            }
+            if (number == 3){
+                System.out.println();}
+            else
+            {
+                information.setMenu();
+            }
+        }while (number !=3);
+    }
+}
