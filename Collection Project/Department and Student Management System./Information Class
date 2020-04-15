@@ -1,0 +1,247 @@
+import java.util.Scanner;
+
+public class Information {
+    Pojo pojo = new Pojo();
+    Student student = new Student();
+    Department department = new Department();
+
+    Scanner s = new Scanner(System.in);
+
+    public void setMenu()
+    {
+        System.out.println("-------------------------------------------");
+        System.out.println(" ----------------- Menu -------------------");
+        System.out.println("1. Manage Department");
+        System.out.println("2. Manage Student");
+        System.out.println("3. Exit or Close ");
+        System.out.println("-------------------------------------------");
+    }
+    public  void performed(int number)
+    {
+        if (number == 1)
+            manageDepartment();
+        else if (number == 2)
+            manageStudent();
+        else
+        {
+            System.out.println("Thank You");
+        }
+    }
+    public void manageDepartment()
+    {
+        System.out.println("1. Add Department");
+        System.out.println("2. Delete Department");
+        System.out.println("3. Update Department");
+        System.out.println("4. Get Department");
+        System.out.println("5. Get All Department");
+        System.out.println("6. Exit or Close");
+        System.out.println("-------------------------------------------");
+    }
+    public void getPerformed(int number)
+    {
+        if (number == 1)
+            addDepartment();
+        else if (number ==2)
+            deleteDepartment();
+        else if (number == 3)
+            updateDepartment();
+        else if (number == 4)
+            getDepartment();
+        else  if (number == 5)
+            getAllDepartment();
+        else
+        {
+            System.out.println("Thank you for Visiting Department");
+        }
+    }
+    public void addDepartment()
+    {
+        System.out.println("-------------------------------------------");
+        System.out.println(" ------------ Added Department ------------");
+        System.out.print("Department Name : ");
+        pojo.setDepartmentName( s.next() );
+        System.out.print("Department Code : ");
+        pojo.setDepartmentCode( s.next() );
+
+        if (department.addDepartment( pojo.getDepartmentName(), pojo.getDepartmentCode() ))
+        {
+            System.out.println(pojo.getDepartmentName() + " Added Successfully");
+            System.out.println("-------------------------------------------");
+        }
+    }
+    public void deleteDepartment()
+    {
+        System.out.println("-------------------------------------------");
+        System.out.println(" ----------- Delete Department ------------");
+        System.out.print("Enter the Department Code to Delete : ");
+        String departmentCode = s.next();
+        if (department.deleteDepartment(departmentCode))
+        {
+            System.out.println("          Delete Successfully");
+            System.out.println("-------------------------------------------");
+        }
+        else
+        {
+            System.out.println("Department Not found..");
+            System.out.println("-------------------------------------------");
+        }
+    }
+    public void updateDepartment()
+    {
+        Boolean isFound = true;
+        System.out.println("-------------------------------------------");
+        System.out.print("Enter the Department Code to Update : ");
+        String departmentCode = s.next();
+        try {
+            isFound = department.getDepartment( departmentCode ).equals(null);
+        }
+        catch (NullPointerException ex) {
+            System.out.println("Department Not Found.");
+            System.out.println("-------------------------------------------");
+        }
+        if(!isFound)
+        {
+            System.out.println("-------------------------------------------");
+            System.out.println(" ----------- Updated Department -----------");
+            System.out.print("Enter the New Department Name : ");
+            pojo.setDepartmentName( s.next() );
+            System.out.print("Enter the New Department Code : ");
+            pojo.setDepartmentCode( s.next() );
+            department.updateDepartment( departmentCode, pojo.getDepartmentName(), pojo.getDepartmentCode() );
+            System.out.println("        Update Successfully      ");
+        }
+    }
+    public void getDepartment()
+    {
+        Boolean isFound = true;
+        System.out.println("-------------------------------------------");
+        System.out.print("Enter the Department Code to Get Department : ");
+        String departmentCode = s.next();
+        try{
+            isFound = department.getDepartment( departmentCode).equalsIgnoreCase( null );
+        }catch (NullPointerException exe)
+        {
+            System.out.println("Department Not Found.");
+        }
+        if (!isFound)
+        {
+            System.out.println(" ---------- Get Department ------------");
+            System.out.println(String.format( "%s %s", "Department Name", "Department Code"));
+            System.out.println(department.getDepartment( departmentCode ));
+            System.out.println("           Get Successfully       ");
+        }
+    }
+    public void getAllDepartment()
+    {
+        System.out.println("-------------------------------------------");
+        System.out.println("----------- Get All Department ------------");
+        department.department();
+        System.out.println("              Successfully.                  ");
+    }
+    public void manageStudent()
+    {
+        System.out.println("-------------------------------------------");
+        System.out.println("1. Add Student");
+        System.out.println("2. Delete Student");
+        System.out.println("3. Update Student");
+        System.out.println("4. Get Student");
+        System.out.println("5. Get All Student");
+        System.out.println("6. Exit or Close");
+
+    }
+    public void performedd(int number)
+    {
+        if (number==1)
+            addStudent();
+        else if (number == 2)
+            deleteStudent();
+        else if (number == 3)
+            updateStudent();
+        else if (number == 4)
+            getStudent();
+        else if (number == 5)
+            getAllStudent();
+        else
+            System.out.println("Thank You");
+    }
+    public void addStudent()
+    {
+        System.out.println("-------------------------------------------");
+        System.out.println(" -------------- Add Student ---------------");
+        System.out.print("Student Name : ");
+        pojo.setStudentName( s.next() );
+        System.out.print("Roll Number : ");
+        pojo.setStudentRollNumber( s.next() );
+
+        if (student.addStudent( pojo.getStudentName(), pojo.getStudentRollNumber() ))
+        {
+            System.out.println(pojo.getStudentName() + " Add Successfully");
+        }
+    }
+    public void deleteStudent()
+    {
+        System.out.println("-------------------------------------------");
+        System.out.print("Enter the Student Roll Number to Delete  : ");
+        String rollNumber = s.next();
+
+        if (student.deleteStudent( rollNumber ))
+        {
+            System.out.println("           Delete Successfully           ");
+        }
+        else
+        {
+            System.out.println("Roll Number not Found");
+        }
+    }
+    public void updateStudent()
+    {
+        boolean isFound = true;
+        System.out.println("-------------------------------------------");
+        System.out.print("Enter the Roll Number to Update : ");
+        String rollNumber = s.next();
+        try
+        {
+            isFound = student.getStudent( rollNumber ).equalsIgnoreCase( null );
+        }
+        catch (NullPointerException exe)
+        {
+            System.out.println("Roll Number not Found");
+        }
+        if (!isFound)
+        {
+            System.out.println("---------- Update Information ------------");
+            System.out.print("Enter the new Student Name : ");
+            pojo.setStudentName( s.next() );
+            System.out.print("Enter the new Student Roll Number : ");
+            pojo.setStudentRollNumber( s.next() );
+            student.update( rollNumber, pojo.getStudentName(), pojo.getStudentRollNumber() );
+            System.out.println("         Update Successfully.          ");
+        }
+    }
+    public void getStudent()
+    {
+        Boolean isFound = true;
+        System.out.println("-------------------------------------------");
+        System.out.print("Enter the Student Roll Number to Get Information : ");
+        String  rollNumber = s.next();
+        try {
+            isFound = student.getStudent( rollNumber ).equalsIgnoreCase( null );
+        }
+        catch(NullPointerException ex) {
+            System.out.println("Roll Number not found.");
+        }
+        if (!isFound)
+        {
+            System.out.println(" ------------- Get Student ---------------");
+            System.out.println(String.format( "%s %s ", "Student Name " , "Student Roll Number" ));
+            System.out.println(student.getStudent( rollNumber ));
+            System.out.println("                  Get Successfully             ");
+        }
+    }
+    public void getAllStudent(){
+        System.out.println("-------------------------------------------");
+        System.out.println("------------ Get All Student -------------");
+        student.student();
+    }
+
+}
