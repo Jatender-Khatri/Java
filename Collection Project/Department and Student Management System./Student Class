@@ -1,0 +1,67 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Student {
+    ArrayList<String> name = new ArrayList<>();
+    ArrayList<String> code = new ArrayList<>();
+    public  boolean addStudent(String studentName, String rollNumber)
+    {
+        name.add(studentName);
+        code.add(rollNumber);
+        return  true;
+    }
+    public boolean deleteStudent(String studentCode)
+    {
+        int rollNumber = code.indexOf(studentCode);
+        if (rollNumber>=0)
+        {
+            name.remove(rollNumber);
+            code.remove(rollNumber);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public boolean update(String studentRollNumber, String newStudentName, String newStudentRollNumber)
+    {
+        int rollNumber  = code.indexOf(studentRollNumber);
+        if (rollNumber>=0)
+        {
+            name.set( rollNumber, newStudentName );
+            name.set( rollNumber, newStudentRollNumber );
+            return true;
+        }
+        return false;
+    }
+    public String getStudent(String rollNumber)
+    {
+        int roll = code.indexOf( rollNumber );
+        if (roll>=0)
+        {
+            return String.format( "%s %s ", name.get( roll ), code.get( roll ) );
+        }
+        return null;
+    }
+    public void student()
+    {
+        Iterator iterator = name.iterator();
+        Iterator iterator1 = code.iterator();
+
+        while (iterator.hasNext() && iterator1.hasNext())
+        {
+            System.out.println("Student Name :  " + iterator.next());
+            System.out.println("Student Roll Number : " + iterator1.next());
+        }
+    }
+
+    public ArrayList<String> getName()
+    {
+        return name;
+    }
+
+    public ArrayList<String> getCode() {
+        return code;
+    }
+}
