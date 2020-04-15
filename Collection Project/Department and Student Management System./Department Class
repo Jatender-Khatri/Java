@@ -1,0 +1,69 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+public class Department {
+        LinkedList<String> name = new LinkedList<>();
+        LinkedList<String> code = new LinkedList<>();
+
+        public  boolean addDepartment(String departmentName, String departmentCode)
+        {
+            name.add( departmentName );
+            code.add( departmentCode );
+            return true;
+        }
+        public boolean deleteDepartment(String departmentCode)
+        {
+            int department = code.indexOf( departmentCode );
+            if (department>=0)
+            {
+                name.remove(department);
+                code.remove(department);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public boolean updateDepartment(String departmentCode,String newDepartmentName, String newDepartmentCode)
+        {
+            int department=code.indexOf( departmentCode );
+            if (department>=0)
+            {
+                name.set( department, newDepartmentName );
+                code.set( department, newDepartmentCode );
+                return true;
+            }
+            else
+            {
+                return  false;
+            }
+        }
+        public void department()
+        {
+            Iterator iterator = name.iterator();
+            Iterator iterator1 = code.iterator();
+
+            while (iterator.hasNext() && iterator1.hasNext())
+            {
+                System.out.println("Department Name = " + iterator.next());
+                System.out.println("Department Code = " + iterator1.next());
+            }
+        }
+        public String getDepartment(String departmentCode)
+        {
+            int department = code.indexOf(departmentCode);
+            if (department>=0)
+            {
+                return  String.format( "%s %s", name.get( department ) ,code.get( department ) );
+            }
+            return  null;
+        }
+
+        public LinkedList<String> getName() {
+            return name;
+        }
+
+        public LinkedList<String> getCode() {
+            return code;
+        }
+}
