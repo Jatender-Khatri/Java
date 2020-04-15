@@ -1,0 +1,35 @@
+public class Pojo {
+    private  String departmentName, departmentCode, studentName, studentRollNumber;
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
+    public String getDepartmentCode() {
+        return departmentCode;
+    }
+
+    public void setDepartmentCode(String departmentCode) {
+        this.departmentCode = departmentCode;
+    }
+
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+
+    public String getStudentRollNumber() {
+        return studentRollNumber;
+    }
+
+    public void setStudentRollNumber(String studentRollNumber) {
+        this.studentRollNumber = studentRollNumber;
+    }
+}
